@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estrangeiros</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #ffffff;
+    }
+
+    #div2 {
+        margin-top: 10px;
+        
+    }
+
+    #txtn2 {
+        margin-top: 25px;
+
+    }
+
+</style>
+<body>
+    <div>
+        <h1 id="titulo">Sistema de Imigrantes</h1>
+    </div>
+    <div id="div2">
+        Digite seu país: <input type="text" nome="txtn1" id="txtn1">
+        <input type="button" id="verific1" onClick="verificaPais()" value="Verificar"></input>
+        <p id="res1"></p>
+        <p id="res2"></p>
+    </div>
+
+   <script>
+       function verificaPais () {
+        var txt1 = document.getElementById('txtn1')
+        var res1 = document.getElementById('res1')
+        var res2 = document.getElementById('res2')
+        
+        var pais = (document.getElementById('txtn1').value)
+        res1.innerHTML = `Seus país é: ${pais}`
+
+        if (pais == 'Brasil') {
+            res2.innerHTML = 'Você é brasileiro'
+        } else {
+            res2.innerHTML = 'Você é estrangeiro'
+        }
+       }
+
+   </script>
+</body>
+</html>
